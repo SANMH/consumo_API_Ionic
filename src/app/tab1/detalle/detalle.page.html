@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle</ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Pasteles</ion-card-subtitle>
+    <ion-card-title>Sabores</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item *ngFor="let p of pasteles" [routerLink]="['/tabs/tab1/tab1',p.id]">
+      <ion-thumbnail slot="start">
+        <img [src]="p.imagen" />
+      </ion-thumbnail>
+      <ion-label>{{ p.nombre}}</ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+<ion-content>
+
+</ion-content>

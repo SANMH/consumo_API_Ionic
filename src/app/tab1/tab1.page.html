@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Menu de Pasteles </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Pasteles</ion-card-subtitle>
+    <ion-card-title>Sabores</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    Selecciona el tu preferido y obten mas información.
+  </ion-card-content>
+</ion-card>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of pasteles" [routerLink]="['/tabs/tab1/detalle',p.id]">
+      <ion-thumbnail slot="start">
+        <img [src]="p.imagen" />
+      </ion-thumbnail>
+      <ion-label>{{ p.nombre}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
